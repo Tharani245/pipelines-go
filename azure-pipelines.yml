@@ -10,7 +10,7 @@ steps:
   - task: Go@0
     inputs:
       command: 'get'
-      workingDirectory: '$(system.defaultworkingdirectory)'
+      workingDirectory: '$(system.defaultworkingdirectory)\main'
 
   - task: Go@0
     inputs:
