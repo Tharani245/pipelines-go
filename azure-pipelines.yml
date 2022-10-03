@@ -2,16 +2,19 @@ trigger:
 - master
 pool:
   vmImage: "ubuntu-latest"
-
+variables:
+  - name: modulePath
+    value: https://github.com/Tharani245/pipelines-go
+    
 steps:
   - task: GoTool@0
     inputs:
-      version: '1.17'
+      version: '1.13.5'
 
   - task: Go@0
     inputs:
       command: 'build'
-      workingDirectory: '$(system.defaultworkingdirectory)'
+      workingDirectory: '$(modulePath)'
   
   - task: CopyFiles@2
     inputs:
