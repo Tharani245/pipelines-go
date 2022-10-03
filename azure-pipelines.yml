@@ -7,10 +7,6 @@ steps:
   - task: GoTool@0
     inputs:
       version: '1.17'
-  - task: Go@0
-    inputs:
-      command: 'get'
-      workingDirectory: '$(system.defaultworkingdirectory)\main'
 
   - task: Go@0
     inputs:
