@@ -10,10 +10,12 @@ steps:
   - task: Go@0
     inputs:
       command: 'build'
+      workingDirectory: '$(system.defaultworkingdirectory)'
 
   - task: Go@0
     inputs:
       command: 'test'
+      workingDirectory: '$(system.defaultworkingdirectory)'
   
   - task: CopyFiles@2
     inputs:
